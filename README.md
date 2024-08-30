@@ -17,7 +17,7 @@ make
 
 Пример запуска клиента:
 ```bash
-./test_task -client
+./async_prog -client
 ```
 
 ### Работа программы
