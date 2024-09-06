@@ -94,3 +94,12 @@ void Client::sendDataToServer(const int data) {
 
     close(clientSocket);
 }
+
+int main() {
+    BufferManager bm;
+    Client client;
+
+    client.startThreads(bm);
+
+    while (true) {}
+}

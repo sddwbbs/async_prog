@@ -2,13 +2,7 @@
 
 Server::Server() : running(false) {}
 
-void Server::startThreads() {
-    std::thread serverThread(&Server::listeningThread, this);
-
-    serverThread.detach();
-}
-
-void Server::listeningThread() {
+void Server::start() {
     if (running) {
         std::cout << "\nSERVER | Server is already running\n";
         return;
@@ -66,4 +60,11 @@ void Server::handleClient(int clientSocket) {
     std::cout << "\nSERVER | Received data: " << dataFromClient << '\n';
 
     close(clientSocket);
+}
+
+int main() {
+    Server server;
+    server.start();
+
+    while (true) {}
 }
