@@ -3,14 +3,12 @@
 Имеются две отдельные программы: клиент и сервер, работающие независимо друг от друга. Клиент и сервер взаимодействуют через UNIX domain sockets. Ожидается, что программы будут запущены локально.
 
 ### Сборка 
-<<<<<<< HEAD
 Производится в директории `/async_prog`
 =======
 Сборка клиента производится в директории `/src/client`,
 сервера в директории `/src/server`
 
 Комманды для сборки:
->>>>>>> 825c4a2 (feat: changed the structure of the application, divided it into 2 separate programs)
 ```bash
 mkdir build && cd build
 cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ ..
@@ -18,7 +16,6 @@ make
 ```
 
 ### Запуск
-<<<<<<< HEAD
 Для запуска нужно указать один из флагов:
 - `-client` для запуска клиента
 - `-server` для запуска сервера
@@ -30,7 +27,6 @@ make
 =======
 - `./client` клиент
 - `./server` сервер
->>>>>>> 825c4a2 (feat: changed the structure of the application, divided it into 2 separate programs)
 
 ### Работа программы
 Демонстрация работы клиента при неработающем сервере:
